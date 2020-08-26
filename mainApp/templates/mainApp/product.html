@@ -1,0 +1,12 @@
+{% extends 'mainApp/base.html' %}
+{% load static %}
+{% block linkscssjs %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/product-style.css' %}" />
+{% endblock %}
+{% block content %}
+	<p>{{ product.product_name }}</p>
+	<p>{{ product.product_description }}</p>
+	<img src={{ product.suggestion_image.url}}  height="400" width="400">
+	<img src={{ product.second_image.url}}  height="400" width="400">
+	
+{% endblock %}

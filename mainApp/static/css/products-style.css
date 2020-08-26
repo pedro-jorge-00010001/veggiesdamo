@@ -1,0 +1,72 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+ .list{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: space-around;
+	padding-top: 20px;
+}
+
+.list li{
+	list-style-type: none;
+	padding: 5px;
+}
+
+.list li:hover{
+	opacity: 0.8;
+	transition-property: opacity;
+  	transition-duration: 1s;
+}
+/*
+.list img{
+}
+.infomation {
+	background-color: #82be58;
+	list-style-type: none;
+	padding: 20px;
+	opacity: 0.9;
+	border-radius: 10px;
+}
+.infomation:hover{
+	background-color: #ea5297;
+	transition-property: font-size color;
+  	transition-duration: 1s;
+ }
+
+.infomation h3 {
+	color: #662383;
+}
+.infomation p {
+	color: black;
+	font-size: 22px;
+	max-width: 230px;
+	letter-spacing: 1px;
+}
+*/

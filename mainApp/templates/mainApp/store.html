@@ -1,0 +1,28 @@
+{% extends 'mainApp/base.html' %}
+{% load static %}
+{% block linkscssjs %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/store-style.css' %}" />
+{% endblock %}
+{% block content %}
+  <div class="parent">
+    <div class="child">
+    	<a href="{% url 'mainApp:products' 'hamburguer' %}">
+  	  	<img src="../mainApp/static/images/asdasd.jpg" alt="Forest" width="300" height="550">
+  	  	<h2>Hambúrgueres</h2>
+    	</a>
+    </div>
+    <div class="child">
+    	<a href="{% url 'mainApp:products' 'salgado' %}">
+  	  	<img src="../mainApp/static/images/postblog24.jpg" alt="Forest" width="300" height="550">
+  	  	<h2>Salgados</h2>
+    	</a>
+    </div>
+    <div class="child">
+    	<a href="{% url 'mainApp:products' 'doce' %}">
+  	  	<img src="../mainApp/static/images/asdasd.jpg" alt="Forest" width="300" height="550">
+  	  	<h2>Doces</h2>
+    	</a>
+    </div>
+  </div>
+{% endblock %}
+

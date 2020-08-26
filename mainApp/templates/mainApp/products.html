@@ -1,0 +1,33 @@
+{% extends 'mainApp/base.html' %}
+{% load static %}
+{% block linkscssjs %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/products-style.css' %}" />
+{% endblock %}
+{% block content %}
+	<ul class="list">
+	{% for prod in products %}
+		<li>
+			<div class="card">
+			  <img src={{ prod.suggestion_image.url }} height="230" width="230" >
+			  <h1>{{ prod.product_name }}</h1>
+			  <p class="price">{{ prod.price }}</p>
+			  <p>{{ product.product_description }}</p>
+			  <p><button>Ver mais</button></p>
+			</div>
+		</li>
+	{% endfor %}
+	</ul>
+	<!---<ul class="list">
+	{% for prod in products %}
+		<li>
+		  	<a href="{% url 'mainApp:product' prod.product_type prod.id %}">
+			  	<img src={{ prod.suggestion_image.url }} height="230" width="230" >
+			  	<div class="infomation">
+				  	<p>{{ prod.product_name }}</p>
+				  	<h3>{{ prod.price }} €</h3>
+			  	</div>
+		  	</a>
+	  	</li>
+	{% endfor %}
+	</ul> -->
+{% endblock %}
