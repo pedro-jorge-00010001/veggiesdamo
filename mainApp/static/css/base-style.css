@@ -4,55 +4,91 @@
   box-sizing: border-box; 
 }
 
+html, body{
+  height: 100%;
+}
+
 body{
   font-family: Perpetua,Baskerville,Big Caslon,Palatino Linotype,Palatino,URW Palladio L,Nimbus Roman No9 L,serif;
   background-image: url("../images/walpapper.jpg");
   background-size: contain;
+  background-attachment: fixed;
 }
 
 #logo-letters{
   color: white;
-  font-size: 25px;
+  font-size: 27px;
   letter-spacing: 1px;
+  width: 30%;
 }
 
 nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 9vh;
   background-color: #ea5297;
-  position: sticky;
+  position: fixed;
   top:0;
   z-index: 1;
+  width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#navbar{
+  transition-property: top;
+  transition-duration: 0.5s;
+}
+
+li{
+  list-style: none;
 }
 
 a{
   text-decoration: none;
 }
-
 .nav-links{
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 45%;
+  
+}
+
+.nav-links li{
+  position: relative;
+  display: inline-block;
 }
 
 .nav-links a{ 
-  font-size: 20px;
+  font-size: 22px;
   color: #ffe6ff;
   letter-spacing: 1px;
   transition-property: color;
   transition-duration: 0.3s;
 }
 
-.nav-links li{
-  list-style: none;
-}
-
 .nav-links a:hover{
   color: #457c4e;
-  border-bottom: 2px solid #457c4e;
 }
+
+.nav-links a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #457c4e;
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  transition: all ease-in-out 0.3s;
+  transition-delay: 0.1s;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+/* yt kevin powell*/
+
 .menu-btn {
   position: relative;
   display: none;
@@ -85,18 +121,21 @@ a{
 .menu-btn__burger::after {
   transform: translateY(10px);
 }
-.blockcontent {
+
+.blockcontent{
   min-height: 100vh;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
-  background-color: #f2f2f2;
-  padding: 15px;
+  margin-top: 8vh;
+  background-color: white;
+  box-shadow: 5px 0 8px -7px rgba(0,0,0,.5), -5px 0 8px -7px rgba(0,0,0,.5);
+  text-align: center;
 }
 
 .footer{
   z-index: 2;
   background-color: #457c4e;
-  opacity: 0.9;
+  /*opacity: 0.9;*/
   margin-bottom: 0;
 }
 
@@ -108,7 +147,7 @@ a{
 }
 
 .footer-body div{
-  font-size: 18px;
+  font-size: 20px;
   width: 30%;
   flex-basis: 50%;
   text-align: center;
@@ -121,25 +160,41 @@ a{
   text-align: left;
 }
 
+#pfollow{
+  font-size: 22px;
+  text-align: center;
+}
+
 .footer-body div a span{
   height: 40px;
   width: 40px;
   line-height: 40px;
   color: white;
-  font-size: 25px;
+  font-size: 30px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
 }
 
 .footer-body div a span:hover{
   color: #ea5197;
-  font-size: 35px;
   transition-property: font-size color;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
-
+ .contacts{
+   
+  justify-content: center; 
+  align-items: center;
+ }
 
 .contacts a{
+  font-size: 20px;
   color: white;
+  text-align: center;
 }
+
+
 
 @media screen and (max-width: 2000px, min-width: 1000px){
   .nav-links{
@@ -172,4 +227,3 @@ a{
     width: 100%;
   }
 }
-

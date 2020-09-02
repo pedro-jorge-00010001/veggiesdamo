@@ -12,8 +12,8 @@
 	    {% endblock %}
 	</head>
 	<body>
-		<nav>
-			<p id="logo-letters">VEGGIES DA <b> MÓ </b></p>
+		<nav id="navbar">
+			<p id="logo-letters">VEGGIES DA MÓ </p>
 			<ul id="nav-l" class="nav-links">
 				<li><a href="{% url 'mainApp:index'  %}">Página Inicial</a></li>
 				<li><a href="{% url 'mainApp:store'  %}">Loja</a></li>
@@ -25,31 +25,36 @@
     			<div class="menu-btn__burger"></div>
   			</div>
 		</nav>
-
 		<div class="blockcontent">
 			{% block content %}
 	        {% endblock %}
         </div>
-
+        <!--
+	        {% block contentdown %}
+	        {% endblock%}
+    	-->
 		<div class="footer">
 			<div class="footer-body">
-				<div id="we">
+				<div>
 		  			<p>Os Veggies da Mó são produtos saudáveis vegans e vegetarianos. Caseirinhos, cheios de sabor e cozinhados com muito amor, podem ser encomendados e distribuídos na zona de Almeirim, Alpiarça, Fazendas de Almeirim e Santarém. -Entregues congelados</p>
 	  			</div>
 
 	  			<div>
-	  				<h4>Segue-nos</h4>
+	  				<p id="pfollow">Segue-nos</p>
+	  				<br>
 	  				<a target="_blank" href="https://www.instagram.com/veggiesdamo/"><span class="fab fa-instagram"></span> </a>
 		  			<a target="_blank" href="https://www.facebook.com/veggiesdamo/"><span class="fab fa-facebook-square"></span> </a>
-		  			
 	  			</div>
-	  			
+	  		
 	  			<div id="contacts" class="contacts">
-					<a href="tel:+351913547720"> T.+351 913547720	</a>		
-		  			<p>E.monicamendoncac@gmail.com</p>
+	  				<br>
+	  				<br>
+	  					<a href="tel:+351913547720">T.+351 913547720</a>
+		  				<a href="mailto:monicamendoncac@gmail">E.monicamendoncac@gmail.com</a>					
 	  			</div>
   			</div>
 		</div>
+		
 		<script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 	</body>
 </html>

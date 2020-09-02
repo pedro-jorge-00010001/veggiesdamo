@@ -1,0 +1,24 @@
+.we{
+  height: 100%;
+  display: flex;
+}
+.we-image{
+  position: relative;
+  background-image: url("../images/pexels-pok-rie-268261.jpg");
+  height: 100%; 
+  width: 50%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  align-items: center;
+}
+
+.we p{
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  color: black;
+  font-size: 18px;
+}

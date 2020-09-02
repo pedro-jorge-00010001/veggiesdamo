@@ -5,29 +5,17 @@
 {% endblock %}
 {% block content %}
 	<ul class="list">
-	{% for prod in products %}
-		<li>
-			<div class="card">
-			  <img src={{ prod.suggestion_image.url }} height="230" width="230" >
-			  <h1>{{ prod.product_name }}</h1>
-			  <p class="price">{{ prod.price }}</p>
-			  <p>{{ product.product_description }}</p>
-			  <p><button>Ver mais</button></p>
-			</div>
-		</li>
-	{% endfor %}
+		{% for prod in products %}
+			<li>
+			  	<a href="{% url 'mainApp:product' prod.product_type prod.id %}">
+				  	<img src={{ prod.suggestion_image.url }}  onmouseover="this.src='{{ prod.second_image.url }}'" onmouseout="this.src='{{ prod.suggestion_image.url }}'" height="350" width="300" >
+				  	<div class="infomation">
+					  	<p>{{ prod.product_name }}</p>
+					  	<p id="price">{{ prod.price }}€</p>
+					  	<i id="eye" class="fa fa-eye" ></i>
+				  	</div>
+			  	</a>
+		  	</li>
+		{% endfor %}
 	</ul>
-	<!---<ul class="list">
-	{% for prod in products %}
-		<li>
-		  	<a href="{% url 'mainApp:product' prod.product_type prod.id %}">
-			  	<img src={{ prod.suggestion_image.url }} height="230" width="230" >
-			  	<div class="infomation">
-				  	<p>{{ prod.product_name }}</p>
-				  	<h3>{{ prod.price }} €</h3>
-			  	</div>
-		  	</a>
-	  	</li>
-	{% endfor %}
-	</ul> -->
 {% endblock %}
